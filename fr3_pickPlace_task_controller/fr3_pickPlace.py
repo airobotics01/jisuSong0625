@@ -6,7 +6,7 @@ import argparse
 
 import numpy as np
 from isaacsim.core.api import World
-from tasks.pick_place import PickPlace
+from tasks.pick_place_task import PickPlace
 from controllers.pick_place import PickPlaceController
 
 my_world = World(stage_units_in_meters=1.0)
