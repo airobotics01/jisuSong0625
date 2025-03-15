@@ -276,7 +276,7 @@ class ShapeDrawing:
   
 
 class KoreanCharacterDrawing(ShapeDrawing):
-    """한글 '아' 글자를 정면으로 그리기를 담당하는 클래스 (x축 고정, y와 z 좌표 이동)"""
+    """한글 글자를 정면으로 그리기를 담당하는 클래스 (x축 고정, y와 z 좌표 이동)"""
     
     def __init__(self, name="korean_character_drawing", color=(1.0, 0.5, 0.2, 1.0), character = '', robot = "", controller = None):
         super().__init__(name=name, color=color)
@@ -296,11 +296,10 @@ class KoreanCharacterDrawing(ShapeDrawing):
         
         # 더 먼 거리에서 그리기 위한 x축 오프셋 증가
         self.x_offset = 0.4  # 기존 0.2에서 0.4로 증가
-        
 
 
     def draw_shape(self, observations, target_name):
-        """현재 설정을 기반으로 '아' 글자를 정면으로 그리기"""
+        """현재 설정을 기반으로 글자를 정면으로 그리기"""
         try:
             if not self.is_active:
                 if target_name in observations and "position" in observations[target_name]:
