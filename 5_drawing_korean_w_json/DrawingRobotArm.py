@@ -288,8 +288,7 @@ class KoreanCharacterDrawing(ShapeDrawing):
         self.delay_seconds = 2.0  # 그리기 시작 전 대기 시간 (2초)
         self.is_drawing = False  # 그리기 진행 중인지 여부
         self.initial_position = None  # 초기 위치 저장
-        # 글자의 각 획 정의
-        self.strokes = [get_coordinate(i) for i in find_paths_by_name(character)]
+        self.strokes = [get_coordinate(i) for i in find_paths_by_name(character)]  # 글자의 각 획 정의
         self.character = character    # 그리는 글자
         self.robot = robot  # 그리는 로봇
         self.controller = controller
@@ -802,7 +801,7 @@ def main():
             drawing = KoreanCharacterDrawing(
                 name=f"Korean Gan for {target_name}", 
                 color=colors[i % len(colors)],
-                character='ㄹ',
+                character='ㅀ',
                 robot=my_frankas[i],
                 controller=controllers[i]
             )
