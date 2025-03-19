@@ -985,8 +985,7 @@ def main():
                         ee_pos = franka.end_effector.get_world_pose()[0]  # This gets the actual position
         
                         # Use the actual end effector position for drawing
-                        if ee_pos[0] >= 0.87 & ee_pos[0] <= 0.85:
-                            print(f"ee_pos[0]: {ee_pos[0]}")
+                        if (ee_pos[0] <= 0.87) & (ee_pos[0] >= 0.85):
                             ee_drawer.update_drawing(ee_pos)
         
                         # Debug info
